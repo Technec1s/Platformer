@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Terrain
+  - Kiwi
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -40,6 +43,12 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2185614885
+    locked: 0
+  - name: Background2
+    uniqueID: 1418113925
+    locked: 0
+  - name: Bacnground3
+    uniqueID: 2412273011
     locked: 0
   - name: Default
     uniqueID: 0
