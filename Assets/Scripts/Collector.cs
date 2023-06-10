@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class Collector : MonoBehaviour
 {
-    private int kiwis = 0;
+    [SerializeField] private AudioSource collectSoundEffect;
     [SerializeField] private Text kiwisCount;
+
+    private int kiwis = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Kiwi"))
         {
+            collectSoundEffect.Play();
             Destroy(collision.gameObject);
             kiwis++;
             kiwisCount.text = "Kiwis collected: " + kiwis;

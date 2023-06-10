@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private AudioSource jumpSourceEffect;
+
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public int maxJumps = 2;
+    public static Vector2 lastCheckPointPos = new Vector2(-53.81f, 6f);
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -20,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         jumpsRemaining = maxJumps;
+        GameObject.FindGameObjectWithTag("Player").transform.position = lastCheckPointPos;
     }
 
     private void Update()
@@ -31,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && jumpsRemaining > 0)
         {
             Jump();
+            jumpSourceEffect.Play();
         }
 
         UpdateAnimationState();

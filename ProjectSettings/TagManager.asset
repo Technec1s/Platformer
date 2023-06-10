@@ -7,6 +7,8 @@ TagManager:
   - Terrain
   - Kiwi
   - Trap
+  - Trampoline
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Grass
+    uniqueID: 2429684221
+    locked: 0
   - name: Background
     uniqueID: 2185614885
     locked: 0
@@ -52,6 +57,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1223733321
     locked: 0
   - name: Terrain
     uniqueID: 598231873
